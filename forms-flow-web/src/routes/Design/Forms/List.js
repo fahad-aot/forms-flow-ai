@@ -25,7 +25,8 @@ import {
 } from "../../../actions/checkListActions";
 import { useTranslation, Translation } from "react-i18next";
 import { unPublishForm } from "../../../apiManager/services/processServices";
-import FormTable from "./../../../components/Form/constants/FormTable.js";
+// import FormTable from "./../../../components/Form/constants/FormTable.js";
+import FormDataGrid from "./../../../components/Form/constants/MUIDatagridForm.js";
 import ClientTable from "./../../../components/Form/constants/ClientTable";
 import _ from "lodash";
 import _camelCase from "lodash/camelCase";
@@ -344,7 +345,7 @@ const List = React.memo((props) => {
   };
   const renderTable = () => {
     if (createDesigns || viewDesigns) {
-      return <FormTable />;
+      return <FormDataGrid />;
     }
     if (createSubmissions) {
       return <ClientTable />;

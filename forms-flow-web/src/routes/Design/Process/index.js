@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { useSelector } from "react-redux";
 import ProcessCreateEdit from "./ProcessCreateEdit";
-import ProcessTable from './ProcessTable';
+import EnhancedTable from './MUITable';
 import { BASE_ROUTE } from "../../../constants/constants";
 import Loading from "../../../containers/Loading";
 import AccessDenied from "../../../components/AccessDenied";
@@ -44,7 +44,7 @@ const Processes = () => {
     // <div data-testid="Process-index">
     <>
       <Switch>
-        <Route exact path={`${BASE_ROUTE}:viewType`} component={ProcessTable} />
+        <Route exact path={`${BASE_ROUTE}:viewType`} component={EnhancedTable} />
         <DesignerProcessRoute
           exact
           path={`${BASE_ROUTE}subflow/:step/:processKey?`}
